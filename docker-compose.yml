@@ -7,7 +7,7 @@ services:
     image: "blog-web"
     command: bash -c "npm install && node app.js"
     volumes:
-        - "/home/yellowflash/workspace/learning/docker/Blog-Website:/usr/src/app"
+        - ".:/usr/src/app"
 
   # registry:
   #   restart: always
