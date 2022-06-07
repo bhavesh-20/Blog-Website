@@ -1,0 +1,21 @@
+version: '2'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    image: "blog-web"
+    command: bash -c "npm install && node app.js"
+    volumes:
+        - "/home/yellowflash/workspace/learning/docker/Blog-Website:/usr/src/app"
+
+  # registry:
+  #   restart: always
+  #   image: registry:2
+  #   ports:
+  #     - 5000:5000
+  #   environment:
+  #     REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /var/lib/registry
+  #   volumes:
+  #     - /home/yellowflash/tmpdata:/var/lib/registry
+
